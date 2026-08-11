@@ -1,0 +1,5 @@
+venv/
+funding_engine
+__pycache__/
+*.pyc
+.env
