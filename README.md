@@ -2,7 +2,7 @@
 
 Real-time funding rate arbitrage scanner that proves 100x+ tweak via O(1) caching.
 
-## Live Performance Proof (Your Machine)
+## Live Performance Proof: Python API 0.09/sec → C++ O(1) 35M/sec
 
 ### Python Baseline: API Bound
 
