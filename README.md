@@ -51,3 +51,15 @@ src/
     arb_detector.py # Live arb + cache benchmark
   cpp/
     funding_engine.cpp # O(1) 35M/sec engine
+
+### Why 35M/sec? O(1) Explained Simply
+
+**Before (Slow):**
+fetch_price() → API call → wait 10s → fetch_price() → wait...
+
+**After (O(1) Cache):**
+1. fetch once → cache["bybit"] = -0.00624%  // O(1) write
+2. check arb → look at desk, not phone      // O(1) read
+3. No more API calls = 35M checks/sec
+
+It's like checking your pocket (O(1)) vs going to bank every time (API).
